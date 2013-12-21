@@ -1,0 +1,14 @@
+This is a simple kernel module.
+it shows how to create a kernel module
+like load module and remove module.
+
+
+to compile use command 'make'
+
+it will generate a .ko file, now using 'modinfo' command one can see the information about the module (provided using verious macros 'MODULE_AUTOHOR',
+'MODULE_LICENSE', 'MODULE_DESCRIPTION' etc.
+
+to load the module use 'insmod exmodule.ko', to see the loaded modules use 'lsmod' (one can grep for his own module [without ko extention] 
+'lsmod | grep exmodule'), finally to unload the module use 'rmmod exmodule'
+
+one can see the messages printed by all kernel modules using 'dmesg' command or in '/var/log/messages'
